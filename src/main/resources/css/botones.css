@@ -1,0 +1,15 @@
+.button {
+    -fx-background-color: #C0643C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #A5502F;
+}
+
+.button:disabled {
+    -fx-background-color: #BCAAA4;
+}
