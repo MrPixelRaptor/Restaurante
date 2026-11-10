@@ -19,5 +19,6 @@
     <TextField fx:id="txtIdentificador" promptText="ID o correo electrónico" />
     <PasswordField fx:id="txtContrasena" promptText="Contraseña" />
     <Label fx:id="lblError" wrapText="true" minHeight="30" style="-fx-text-fill: #C62828;" />
-    <Button text="Iniciar sesión" onAction="#iniciarSesion" defaultButton="true" maxWidth="Infinity" />
+    <Button text="Iniciar sesión" onAction="#iniciarSesion" defaultButton="true" maxWidth="Infinity" 
+        style="-fx-background-color: #1E88E5; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14;" />
 </VBox>

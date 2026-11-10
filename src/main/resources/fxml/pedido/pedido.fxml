@@ -47,8 +47,8 @@
         <ComboBox fx:id="cmbPlatillo" prefWidth="280" promptText="Selecciona un platillo" />
         <Label text="Cantidad" />
         <TextField fx:id="txtCantidad" prefWidth="70" />
-        <Button text="Agregar platillo" onAction="#agregarPlatillo" />
-        <Button text="Quitar platillo" onAction="#quitarPlatillo" />
+        <Button text="Agregar platillo" onAction="#agregarPlatillo" style="-fx-background-color: #2E7D32; -fx-text-fill: white;" />
+        <Button text="Quitar platillo" onAction="#quitarPlatillo" style="-fx-background-color: #C62828; -fx-text-fill: white;" />
     </HBox>
 
     <TableView fx:id="tablaDetalles" prefHeight="170" minHeight="120">
@@ -76,12 +76,12 @@
     </HBox>
 
     <HBox spacing="10">
-        <Button text="Agregar" onAction="#agregar" />
-        <Button text="Actualizar" onAction="#actualizar" />
-        <Button text="Borrar" onAction="#borrar" />
-        <Button text="Buscar" onAction="#buscar" />
-        <Button text="Limpiar" onAction="#limpiar" />
-        <Button text="Cancelar" onAction="#cancelar" />
+        <Button text="Agregar" onAction="#agregar" style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-font-weight: bold;" />
+        <Button text="Actualizar" onAction="#actualizar" style="-fx-background-color: #F57C00; -fx-text-fill: white;" />
+        <Button text="Borrar" onAction="#borrar" style="-fx-background-color: #C62828; -fx-text-fill: white; -fx-font-weight: bold;" />
+        <Button text="Buscar" onAction="#buscar" style="-fx-background-color: #0288D1; -fx-text-fill: white;" />
+        <Button text="Limpiar" onAction="#limpiar" style="-fx-background-color: #757575; -fx-text-fill: white;" />
+        <Button text="Cancelar" onAction="#cancelar" style="-fx-background-color: #78909C; -fx-text-fill: white;" />
     </HBox>
 
     <TableView fx:id="tablaPedidos" VBox.vgrow="ALWAYS">

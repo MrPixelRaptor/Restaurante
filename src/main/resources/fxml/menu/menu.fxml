@@ -19,27 +19,19 @@
             <Label text="Restaurante" style="-fx-text-fill: white; -fx-font-size: 22; -fx-font-weight: bold;" />
             <Label fx:id="lblUsuario" wrapText="true" style="-fx-text-fill: #D7CCC8; -fx-font-size: 12;" />
 
-            <Button fx:id="btnAdministradores" text="Administradores" maxWidth="Infinity"
-                    onAction="#mostrarAdministradores" />
-            <Button fx:id="btnMeseros" text="Meseros" maxWidth="Infinity"
-                    onAction="#mostrarMeseros" />
-            <Button fx:id="btnCocineros" text="Cocineros" maxWidth="Infinity"
-                    onAction="#mostrarCocineros" />
-            <Button fx:id="btnClientes" text="Clientes" maxWidth="Infinity"
-                    onAction="#mostrarClientes" />
-            <Button fx:id="btnCategorias" text="Categorías" maxWidth="Infinity"
-                    onAction="#mostrarCategorias" />
-            <Button fx:id="btnPlatillos" text="Platillos" maxWidth="Infinity"
-                    onAction="#mostrarPlatillos" />
-            <Button fx:id="btnReservas" text="Reservas" maxWidth="Infinity"
-                    onAction="#mostrarReservas" />
-            <Button fx:id="btnPedidos" text="Pedidos" maxWidth="Infinity"
-                    onAction="#mostrarPedidos" />
+            <Button fx:id="btnAdministradores" text="Administradores" maxWidth="Infinity" onAction="#mostrarAdministradores" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
+            <Button fx:id="btnMeseros" text="Meseros" maxWidth="Infinity" onAction="#mostrarMeseros" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
+            <Button fx:id="btnCocineros" text="Cocineros" maxWidth="Infinity" onAction="#mostrarCocineros" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
+            <Button fx:id="btnClientes" text="Clientes" maxWidth="Infinity" onAction="#mostrarClientes" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
+            <Button fx:id="btnCategorias" text="Categorías" maxWidth="Infinity" onAction="#mostrarCategorias" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
+            <Button fx:id="btnPlatillos" text="Platillos" maxWidth="Infinity" onAction="#mostrarPlatillos" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
+            <Button fx:id="btnReservas" text="Reservas" maxWidth="Infinity" onAction="#mostrarReservas" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
+            <Button fx:id="btnPedidos" text="Pedidos" maxWidth="Infinity" onAction="#mostrarPedidos" style="-fx-background-color: #4E342E; -fx-text-fill: white;" />
 
             <Region VBox.vgrow="ALWAYS" />
 
             <Button fx:id="btnCerrarSesion" text="Cerrar sesión" maxWidth="Infinity" onAction="#cerrarSesion"
-                    style="-fx-background-color: #8D3B2A; -fx-text-fill: white; -fx-font-weight: bold;" />
+                style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-weight: bold;" />
         </VBox>
     </left>
 </BorderPane>

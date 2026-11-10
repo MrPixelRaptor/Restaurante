@@ -37,17 +37,17 @@
         </GridPane>
         <VBox spacing="8" alignment="TOP_CENTER">
             <ImageView fx:id="imgPlatillo" fitWidth="120" fitHeight="120" style="-fx-background-color: black;" />
-            <Button text="Cargar Imagen" onAction="#cargarImagen" />
+            <Button text="Cargar Imagen" onAction="#cargarImagen" style="-fx-background-color: #1976D2; -fx-text-fill: white; -fx-font-weight: bold;" />
         </VBox>
     </HBox>
 
     <HBox spacing="8">
-        <Button text="Agregar" onAction="#agregar" />
-        <Button text="Limpiar" onAction="#limpiar" />
-        <Button text="Buscar" onAction="#buscar" />
-        <Button text="Actualizar" onAction="#actualizar" />
-        <Button text="Borrar" onAction="#borrar" />
-        <Button text="Cancelar" onAction="#cancelar" />
+        <Button text="Agregar" onAction="#agregar" style="-fx-background-color: #2E7D32; -fx-text-fill: white; -fx-font-weight: bold;" />
+        <Button text="Limpiar" onAction="#limpiar" style="-fx-background-color: #757575; -fx-text-fill: white;" />
+        <Button text="Buscar" onAction="#buscar" style="-fx-background-color: #0288D1; -fx-text-fill: white;" />
+        <Button text="Actualizar" onAction="#actualizar" style="-fx-background-color: #F57C00; -fx-text-fill: white;" />
+        <Button text="Borrar" onAction="#borrar" style="-fx-background-color: #C62828; -fx-text-fill: white; -fx-font-weight: bold;" />
+        <Button text="Cancelar" onAction="#cancelar" style="-fx-background-color: #78909C; -fx-text-fill: white;" />
     </HBox>
 
     <TableView fx:id="tablaPlatillos" VBox.vgrow="ALWAYS">
