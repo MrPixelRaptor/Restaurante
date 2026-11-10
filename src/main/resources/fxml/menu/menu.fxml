@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:id="contenedor"
+            fx:controller="edu.utj.evnd.poo.restaurante.controller.MenuController">
+    <left>
+        <VBox spacing="8" prefWidth="190" style="-fx-background-color: #5D4037;">
+            <padding>
+                <Insets top="20" right="12" bottom="20" left="12" />
+            </padding>
+
+            <Label text="Restaurante" style="-fx-text-fill: white; -fx-font-size: 22; -fx-font-weight: bold;" />
+            <Label fx:id="lblUsuario" wrapText="true" style="-fx-text-fill: #D7CCC8; -fx-font-size: 12;" />
+
+            <Button fx:id="btnAdministradores" text="Administradores" maxWidth="Infinity"
+                    onAction="#mostrarAdministradores" />
+            <Button fx:id="btnMeseros" text="Meseros" maxWidth="Infinity"
+                    onAction="#mostrarMeseros" />
+            <Button fx:id="btnCocineros" text="Cocineros" maxWidth="Infinity"
+                    onAction="#mostrarCocineros" />
+            <Button fx:id="btnClientes" text="Clientes" maxWidth="Infinity"
+                    onAction="#mostrarClientes" />
+            <Button fx:id="btnCategorias" text="Categorías" maxWidth="Infinity"
+                    onAction="#mostrarCategorias" />
+            <Button fx:id="btnPlatillos" text="Platillos" maxWidth="Infinity"
+                    onAction="#mostrarPlatillos" />
+            <Button fx:id="btnReservas" text="Reservas" maxWidth="Infinity"
+                    onAction="#mostrarReservas" />
+            <Button fx:id="btnPedidos" text="Pedidos" maxWidth="Infinity"
+                    onAction="#mostrarPedidos" />
+
+            <Region VBox.vgrow="ALWAYS" />
+
+            <Button fx:id="btnCerrarSesion" text="Cerrar sesión" maxWidth="Infinity" onAction="#cerrarSesion"
+                    style="-fx-background-color: #8D3B2A; -fx-text-fill: white; -fx-font-weight: bold;" />
+        </VBox>
+    </left>
+</BorderPane>

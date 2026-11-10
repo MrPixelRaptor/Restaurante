@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.utj.evnd.poo.restaurante.controller.CocineroController"
+      spacing="10">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15" />
+    </padding>
+
+    <Label text="Cocinero - CRUD" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+    <HBox spacing="15">
+        <GridPane hgap="10" vgap="8">
+            <TextField fx:id="txtId" promptText="ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="txtCurp" promptText="CURP" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="txtRfc" promptText="RFC" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+            <TextField fx:id="txtNombre" promptText="Nombre" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="txtApellido" promptText="Apellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="dpNacimiento" promptText="Nacimiento" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+            <TextField fx:id="txtCorreo" promptText="Correo" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="txtTelefono" promptText="Teléfono" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtUrlImagen" promptText="URL Imagen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+            <TextField fx:id="txtNumEmpleado" promptText="Núm. de empleado" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="txtEspecialidad" promptText="Especialidad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="cmbEstacion" promptText="Estación de trabajo" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        </GridPane>
+        <VBox spacing="8" alignment="TOP_CENTER">
+            <ImageView fx:id="imgCocinero" fitWidth="120" fitHeight="120" style="-fx-background-color: black;" />
+            <Button text="Cargar Imagen" onAction="#cargarImagen" />
+        </VBox>
+    </HBox>
+
+    <HBox spacing="8">
+        <Button text="Agregar" onAction="#agregar" />
+        <Button text="Limpiar" onAction="#limpiar" />
+        <Button text="Buscar" onAction="#buscar" />
+        <Button text="Actualizar" onAction="#actualizar" />
+        <Button text="Borrar" onAction="#borrar" />
+        <Button text="Cancelar" onAction="#cancelar" />
+    </HBox>
+
+    <TableView fx:id="tablaCocineros" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" />
+            <TableColumn fx:id="colCurp" text="CURP" />
+            <TableColumn fx:id="colRfc" text="RFC" />
+            <TableColumn fx:id="colNombre" text="Nombre" />
+            <TableColumn fx:id="colApellido" text="Apellido" />
+            <TableColumn fx:id="colNacimiento" text="Nacimiento" />
+            <TableColumn fx:id="colCorreo" text="Correo" />
+            <TableColumn fx:id="colTelefono" text="Teléfono" />
+            <TableColumn fx:id="colUrlImagen" text="Imagen" />
+            <TableColumn fx:id="colNumEmpleado" text="Núm. empleado" />
+            <TableColumn fx:id="colEspecialidad" text="Especialidad" />
+            <TableColumn fx:id="colEstacion" text="Estación" />
+        </columns>
+    </TableView>
+</VBox>

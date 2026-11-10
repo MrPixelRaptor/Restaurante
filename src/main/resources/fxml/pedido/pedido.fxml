@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      spacing="12"
+      fx:controller="edu.utj.evnd.poo.restaurante.controller.PedidoController">
+    <padding>
+        <Insets top="20" right="24" bottom="20" left="24" />
+    </padding>
+
+    <Label text="Pedidos" style="-fx-font-size: 26; -fx-font-weight: bold;" />
+
+    <GridPane hgap="14" vgap="12">
+        <columnConstraints>
+            <ColumnConstraints minWidth="80" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints minWidth="80" />
+            <ColumnConstraints hgrow="ALWAYS" />
+            <ColumnConstraints minWidth="80" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+
+        <Label text="ID pedido" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtId" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Fecha" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <DatePicker fx:id="dpFecha" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <Label text="Estado" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+        <ComboBox fx:id="cmbEstado" maxWidth="Infinity" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+    </GridPane>
+
+    <Label text="Platillos del pedido" style="-fx-font-weight: bold;" />
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Platillo" />
+        <ComboBox fx:id="cmbPlatillo" prefWidth="280" promptText="Selecciona un platillo" />
+        <Label text="Cantidad" />
+        <TextField fx:id="txtCantidad" prefWidth="70" />
+        <Button text="Agregar platillo" onAction="#agregarPlatillo" />
+        <Button text="Quitar platillo" onAction="#quitarPlatillo" />
+    </HBox>
+
+    <TableView fx:id="tablaDetalles" prefHeight="170" minHeight="120">
+        <columns>
+            <TableColumn fx:id="colDetPlatillo" text="Platillo" />
+            <TableColumn fx:id="colDetCantidad" text="Cantidad" />
+            <TableColumn fx:id="colDetPrecio" text="Precio" />
+            <TableColumn fx:id="colDetDescuento" text="Desc. %" />
+            <TableColumn fx:id="colDetSubtotal" text="Subtotal" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+
+    <HBox spacing="20" alignment="CENTER_RIGHT">
+        <Label text="Subtotal:" />
+        <Label fx:id="lblSubtotal" text="0.00" />
+        <Label text="Descuento:" />
+        <Label fx:id="lblDescuento" text="0.00" />
+        <Label text="IVA (16%):" />
+        <Label fx:id="lblIva" text="0.00" />
+        <Label text="Total:" style="-fx-font-weight: bold; -fx-font-size: 16;" />
+        <Label fx:id="lblTotal" text="0.00" style="-fx-font-weight: bold; -fx-font-size: 16;" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Agregar" onAction="#agregar" />
+        <Button text="Actualizar" onAction="#actualizar" />
+        <Button text="Borrar" onAction="#borrar" />
+        <Button text="Buscar" onAction="#buscar" />
+        <Button text="Limpiar" onAction="#limpiar" />
+        <Button text="Cancelar" onAction="#cancelar" />
+    </HBox>
+
+    <TableView fx:id="tablaPedidos" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" />
+            <TableColumn fx:id="colFecha" text="Fecha" />
+            <TableColumn fx:id="colPlatillos" text="Platillos" />
+            <TableColumn fx:id="colDescuento" text="Descuento" />
+            <TableColumn fx:id="colIva" text="IVA" />
+            <TableColumn fx:id="colTotal" text="Total" />
+            <TableColumn fx:id="colEstado" text="Estado" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+</VBox>
